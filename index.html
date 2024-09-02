@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <link rel="stylesheet" href="style.css" />
+
+        <style>
+            * {
+                border: 1px solid black;
+            }
+            canvas {
+                width: 100%;
+            }
+            textarea {
+                width: 90%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <canvas width="2039" height="1378" id="canvas"></canvas>
+            画像
+            <select id="bg">
+                <option value="img0">通常</option>
+                <option value="img1">口開き</option>
+                <option value="img2">笑顔</option>
+                <option value="img3">むすっ</option>
+                <option value="img4">困惑</option>
+                <option value="img5">焦り</option>
+                <option value="img6">大声</option>
+            </select>
+            <textarea id="text"></textarea>
+            <button id="saveImage">画像保存</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
