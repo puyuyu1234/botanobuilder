@@ -21,6 +21,8 @@ function getLen(str) {
     return result;
 }
 
+let fontFamily = "PixelMplus";
+
 const context = canvas.getContext("2d");
 
 const images = {};
@@ -40,7 +42,7 @@ const render = () => {
         positionY: +positionY.value,
         color: "white",
     };
-    context.font = `${defaultFont.fontSize}px monospace`;
+    context.font = `${defaultFont.fontSize}px ${fontFamily}`;
     context.fillStyle = defaultFont.color;
     waitingEvent = () => {
         context.drawImage(images[bg.value], 0, 0);
@@ -61,7 +63,7 @@ const render = () => {
             if (currentFontData.italic) {
                 s += "italic ";
             }
-            s += `${currentFontData.fontSize}px monospace`;
+            s += `${currentFontData.fontSize}px ${fontFamily}`;
 
             return s;
         };
