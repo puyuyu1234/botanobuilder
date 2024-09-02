@@ -16,6 +16,11 @@
             textarea {
                 width: 90%;
             }
+            #displayX,
+            #displayY,
+            #fontSize {
+                width: 20%;
+            }
         </style>
     </head>
 
@@ -30,8 +35,32 @@
                 <option value="img3">むすっ</option>
                 <option value="img4">困惑</option>
                 <option value="img5">焦り</option>
-                <option value="img6">大声</option>
-            </select>
+                <option value="img6">大声</option></select
+            ><br />
+            文字サイズ：<input type="number" id="fontSize" value="120" /><input
+                type="range"
+                id="fontSizeRange"
+                min="10"
+                max="1000"
+                step="10"
+                value="120"
+            /><br />
+            X:<input type="number" id="displayX" value="330" /><input
+                type="range"
+                id="positionX"
+                min="0"
+                max="2040"
+                step="10"
+                value="330"
+            /><br />
+            Y:<input type="number" id="displayY" value="1210" /><input
+                type="range"
+                id="positionY"
+                min="0"
+                max="1380"
+                step="10"
+                value="1210"
+            />
             <textarea id="text"></textarea>
             <button id="saveImage">画像保存</button>
         </div>
