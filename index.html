@@ -14,6 +14,10 @@
             * {
                 border: 1px solid black;
             }
+            h1 {
+                margin: 0px;
+                padding: 10px;
+            }
             canvas {
                 width: 100%;
             }
@@ -51,8 +55,8 @@
                 <option value="face10">メスガキ3</option>
                 <option value="face12">得意げ</option>
                 <option value="face2">むすっ</option>
-                <option value="face4">困惑</option>
-                <option value="face5">焦り</option>
+                <option value="face4">焦り</option>
+                <option value="face5">困惑</option>
                 <option value="face7">大声</option>
                 <option value="face13">涙目</option>
                 <option value="face14">涙目2</option>
@@ -67,14 +71,14 @@
             エフェクト：
             <select id="effect">
                 <option value="none">なし</option>
-                <option value="effect1">1</option>
-                <option value="effect2">2</option>
-                <option value="effect3">3</option>
-                <option value="effect4">4</option>
-                <option value="effect5">5</option>
-                <option value="effect6">6</option>
-                <option value="effect7">7</option>
-                <option value="effect8">8</option>
+                <option value="effect1">話す</option>
+                <option value="effect2">気付く</option>
+                <option value="effect3">怒る</option>
+                <option value="effect5">ハート</option>
+                <option value="effect6">ため息</option>
+                <option value="effect7">笑い</option>
+                <option value="effect4">汗1</option>
+                <option value="effect8">汗2</option>
             </select>
             <br />
             文字サイズ：<input type="number" id="fontSize" value="120" /><input
@@ -106,7 +110,14 @@
         </div>
         <p>
             ※文章の特殊コマンド<br />
-            [font size=100 color=#ff00ff italic bold x=200 y=-300 reset]あああ
+            ■ [font size=100 color=#ff00ff]<br />
+            これ以降の文字サイズを100、文字色を#ff00ffに変更<br />
+            ■ [font italic bold]<br />
+            これ以降の文字を斜体、太字にする<br />
+            ■ [font x=100 y=100]<br />
+            これ以降の文字の表示位置を調整する<br />
+            ■ [font reset]<br />
+            文字の変更をデフォルトに戻す
         </p>
         <script src="script.js"></script>
     </body>

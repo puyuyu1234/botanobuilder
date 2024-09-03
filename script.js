@@ -76,8 +76,20 @@ const render = () => {
         context.globalCompositeOperation = "multiply";
         context.drawImage(assets.get("frame"), 0, 0);
         context.globalCompositeOperation = "source-over";
+        context.drawImage(assets.get("next"), 0, 0, 2039, 300, 0, 0, 2039, 300);
     }
-    if (next.checked) context.drawImage(assets.get("next"), 0, 0);
+    if (next.checked)
+        context.drawImage(
+            assets.get("next"),
+            0,
+            1200,
+            2039,
+            178,
+            0,
+            1200,
+            2039,
+            178
+        );
     if (yuri.checked) context.drawImage(assets.get("name"), 0, 0);
 
     const textArray = text.value.split("\n");
@@ -100,7 +112,10 @@ const render = () => {
 
         return s;
     };
+
+    let y = defaultFont.positionY;
     for (const id in textArray) {
+        let x = defaultFont.positionX;
         const str = textArray[id];
         const stringParts = [];
         const regex = /\[font [^\]]+\]/g;
@@ -118,8 +133,6 @@ const render = () => {
             stringParts.push(str.slice(lastIndex));
         }
 
-        let x = defaultFont.positionX;
-        let y = defaultFont.positionY + id * defaultFont.fontSize;
         for (const part of stringParts) {
             if (regex.exec(part)) {
                 // font処理
@@ -170,37 +183,38 @@ const render = () => {
             );
             x += (getLen(part) * currentFontData.fontSize) / 2;
         }
+        y += +currentFontData.fontSize;
     }
 };
 
 const bindEvent = () => {
-    frame.addEventListener("change", render);
-    next.addEventListener("change", render);
-    yuri.addEventListener("change", render);
-    face.addEventListener("change", render);
-    effect.addEventListener("change", render);
-    text.addEventListener("change", render);
-    fontSize.addEventListener("change", () => {
+    frame.addEventListener("input", render);
+    next.addEventListener("input", render);
+    yuri.addEventListener("input", render);
+    face.addEventListener("input", render);
+    effect.addEventListener("input", render);
+    text.addEventListener("input", render);
+    fontSize.addEventListener("input", () => {
         fontSizeRange.value = fontSize.value;
         render();
     });
-    fontSizeRange.addEventListener("change", () => {
+    fontSizeRange.addEventListener("input", () => {
         fontSize.value = fontSizeRange.value;
         render();
     });
-    positionX.addEventListener("change", () => {
+    positionX.addEventListener("input", () => {
         displayX.value = positionX.value;
         render();
     });
-    displayX.addEventListener("change", () => {
+    displayX.addEventListener("input", () => {
         positionX.value = displayX.value;
         render();
     });
-    positionY.addEventListener("change", () => {
+    positionY.addEventListener("input", () => {
         displayY.value = positionY.value;
         render();
     });
-    displayY.addEventListener("change", () => {
+    displayY.addEventListener("input", () => {
         positionY.value = displayY.value;
         render();
     });
