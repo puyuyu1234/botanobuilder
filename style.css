@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "PixelMplus";
+    src: url("font/PixelMplus12-Regular.ttf");
+}
+* {
+    border: 1px solid black;
+}
+body {
+    max-width: 600px;
+    padding: 0.5em;
+    margin: auto;
+}
+h1 {
+    margin: 0px;
+    padding: 10px;
+}
+canvas {
+    width: 100%;
+}
+textarea {
+    width: 90%;
+}
+#displayX,
+#displayY,
+#fontSize {
+    width: 20%;
+}
+h1 {
+    font-family: "PixelMplus";
+}
