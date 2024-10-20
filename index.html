@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title></title>
+        <title>botanobuilder</title>
         <link rel="stylesheet" href="style.css" />
     </head>
 
@@ -11,70 +11,99 @@
         <h1>botanobuilder</h1>
         <div>
             <canvas width="2039" height="1378" id="canvas"></canvas>
-            <label>フレーム：<input id="frame" type="checkbox" checked /></label>
-            <label>文章送り：<input id="next" type="checkbox" checked /></label>
-            <label>名前：<input id="yuri" type="checkbox" checked /></label><br />
-            表情：
-            <select id="face">
-                <option value="face1">通常</option>
-                <option value="face6">口開き</option>
-                <option value="face3">笑顔</option>
-                <option value="face8">メスガキ1</option>
-                <option value="face9">メスガキ2</option>
-                <option value="face10">メスガキ3</option>
-                <option value="face12">得意げ</option>
-                <option value="face2">むすっ</option>
-                <option value="face4">焦り</option>
-                <option value="face5">困惑</option>
-                <option value="face7">大声</option>
-                <option value="face13">涙目</option>
-                <option value="face14">涙目2</option>
-                <!--<option value="face15">涙目2</option>-->
-                <option value="face16">号泣</option>
-                <option value="face17">不安</option>
-                <option value="face18">混乱</option>
-                <option value="face19">混乱2</option>
-                <option value="face20">おびえ</option>
-                <option value="face21">おびえ2</option>
-            </select>
-            エフェクト：
-            <select id="effect">
-                <option value="none">なし</option>
-                <option value="effect1">話す</option>
-                <option value="effect2">気付く</option>
-                <option value="effect3">怒る</option>
-                <option value="effect5">ハート</option>
-                <option value="effect6">ため息</option>
-                <option value="effect7">笑い</option>
-                <option value="effect4">汗1</option>
-                <option value="effect8">汗2</option>
-            </select>
-            <br />
-            文字サイズ：<input type="number" id="fontSize" value="120" /><input
-                type="range"
-                id="fontSizeRange"
-                min="10"
-                max="1000"
-                step="10"
-                value="120"
-            /><br />
-            X：<input type="number" id="displayX" value="330" /><input
-                type="range"
-                id="positionX"
-                min="0"
-                max="2040"
-                step="10"
-                value="330"
-            /><br />
-            Y：<input type="number" id="displayY" value="1210" /><input
-                type="range"
-                id="positionY"
-                min="0"
-                max="1380"
-                step="10"
-                value="1210"
-            />
-            <textarea id="text"></textarea>
+            <hr />
+            <label class="check">フレーム：<input id="frame" type="checkbox" checked /></label>
+            <label class="check">文章送り：<input id="next" type="checkbox" checked /></label>
+            <label class="check">名前：<input id="yuri" type="checkbox" checked /></label>
+            <hr />
+            <label
+                >表情：
+                <select id="face">
+                    <option value="face1">通常</option>
+                    <option value="face6">口開き</option>
+                    <option value="face3">笑顔</option>
+                    <option value="face8">メスガキ1</option>
+                    <option value="face9">メスガキ2</option>
+                    <option value="face10">メスガキ3</option>
+                    <option value="face12">得意げ</option>
+                    <option value="face2">むすっ</option>
+                    <option value="face4">焦り</option>
+                    <option value="face5">困惑</option>
+                    <option value="face7">大声</option>
+                    <option value="face13">涙目</option>
+                    <option value="face14">涙目2</option>
+                    <!--<option value="face15">涙目2</option>-->
+                    <option value="face16">号泣</option>
+                    <option value="face17">不安</option>
+                    <option value="face18">混乱</option>
+                    <option value="face19">混乱2</option>
+                    <option value="face20">おびえ</option>
+                    <option value="face21">おびえ2</option>
+                </select></label
+            >
+            <label
+                >エフェクト：
+                <select id="effect">
+                    <option value="none">なし</option>
+                    <option value="effect1">話す</option>
+                    <option value="effect2">気付く</option>
+                    <option value="effect3">怒る</option>
+                    <option value="effect5">ハート</option>
+                    <option value="effect6">ため息</option>
+                    <option value="effect7">笑い</option>
+                    <option value="effect4">汗1</option>
+                    <option value="effect8">汗2</option>
+                </select></label
+            >
+            <hr />
+            <label
+                >文字サイズ：<input type="number" id="fontSize" value="120" /><input
+                    type="range"
+                    id="fontSizeRange"
+                    min="10"
+                    max="1000"
+                    step="10"
+                    value="120" /></label
+            ><br />
+            <label
+                >X：<input type="number" id="displayX" value="330" /><input
+                    type="range"
+                    id="positionX"
+                    min="0"
+                    max="2040"
+                    step="10"
+                    value="330"
+            /></label>
+            <label
+                >Y：<input type="number" id="displayY" value="1210" /><input
+                    type="range"
+                    id="positionY"
+                    min="0"
+                    max="1380"
+                    step="10"
+                    value="1210"
+            /></label>
+            <label
+                >字間：<input type="number" id="displayCS" value="0" /><input
+                    type="range"
+                    id="positionCS"
+                    min="0"
+                    max="500"
+                    step="10"
+                    value="0"
+            /></label>
+            <label
+                >行間：<input type="number" id="displayLS" value="0" /><input
+                    type="range"
+                    id="positionLS"
+                    min="0"
+                    max="500"
+                    step="10"
+                    value="0"
+            /></label>
+            <hr />
+            <div id="text_container"><textarea id="text"></textarea></div>
+            <hr />
             <button id="saveImage">画像保存</button>
         </div>
         <p>
@@ -84,10 +113,18 @@
             ■ [font italic bold]<br />
             これ以降の文字を斜体、太字にする<br />
             ■ [font x=100 y=100]<br />
-            これ以降の文字の表示位置を調整する<br />
+            これ以降の文字の表示位置を調整する（絶対座標）<br />
+            ■ [font dx=100 dy=100]<br />
+            これ以降の文字の表示位置を調整する（相対座標）<br />
+            ■ [font sx=100 sy=100]<br />
+            これ以降の文字の字間・行間を調整する<br />
             ■ [font reset]<br />
-            文字の変更をデフォルトに戻す
+            文字の変更をデフォルトに戻す<br />
+            <br />
+            [font reset italic x=100 color=red]のように複数重ねることもできます
         </p>
-        <script src="script.js"></script>
+        <script src="text_style.js"></script>
+        <script src="renderer.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
