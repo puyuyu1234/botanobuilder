@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "PixelMplus";
+    src: url("font/PixelMplus12-Regular.ttf");
+}
+
+body {
+    max-width: 600px;
+    padding: 0.5em;
+    margin: auto;
+    border: none;
+}
+
+h1 {
+    margin: 0px;
+    padding: 10px;
+    font-family: "PixelMplus";
+    border: none;
+}
+
+canvas {
+    width: calc(100% - 2px);
+    border: none;
+    border: 1px solid black;
+}
+
+.div_option {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 20px;
+}
+
+.option_button {
+    width: calc(20% - 4px);
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.hidden {
+    display: none;
+}
+
+#text {
+    width: 100%;
+    height: 5lh;
+}
+
+button.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+#div_save {
+    text-align: center;
+}
+
+#saveImage {
+    font-size: large;
+    padding: 15px 30px;
+    margin: 10px;
+}

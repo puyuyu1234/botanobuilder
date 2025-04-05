@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>botanobuilder（簡易版）</title>
+        <link rel="stylesheet" href="styleEasy.css" />
+    </head>
+
+    <body>
+        <h1>botanobuilder（簡易版）</h1>
+        <div>
+            <canvas width="2039" height="1378" id="canvas"></canvas>
+            <button id="button_face" class="active">表情</button>
+            <button id="button_effect">エフェクト</button>
+            <button id="button_text">テキスト</button>
+
+            <div id="div_face" class="div_option">
+                <button class="ob_face option_button active" value="face1">通常</button>
+                <button class="ob_face option_button" value="face6">口開き</button>
+                <button class="ob_face option_button" value="face3">笑顔</button>
+                <button class="ob_face option_button" value="face8">メスガキ1</button>
+                <button class="ob_face option_button" value="face9">メスガキ2</button>
+                <button class="ob_face option_button" value="face10">メスガキ3</button>
+                <button class="ob_face option_button" value="face12">得意げ</button>
+                <button class="ob_face option_button" value="face2">むすっ</button>
+                <button class="ob_face option_button" value="face4">焦り</button>
+                <button class="ob_face option_button" value="face5">困惑</button>
+                <button class="ob_face option_button" value="face7">大声</button>
+                <button class="ob_face option_button" value="face13">涙目</button>
+                <button class="ob_face option_button" value="face14">涙目2</button>
+                <button class="ob_face option_button" value="face16">号泣</button>
+                <button class="ob_face option_button" value="face17">不安</button>
+                <button class="ob_face option_button" value="face18">混乱</button>
+                <button class="ob_face option_button" value="face19">混乱2</button>
+                <button class="ob_face option_button" value="face20">おびえ</button>
+                <button class="ob_face option_button" value="face21">おびえ2</button>
+            </div>
+
+            <div id="div_effect" class="div_option hidden">
+                <button class="ob_effect option_button active" value="none">なし</button>
+                <button class="ob_effect option_button" value="effect1">話す</button>
+                <button class="ob_effect option_button" value="effect2">気付く</button>
+                <button class="ob_effect option_button" value="effect3">怒る</button>
+                <button class="ob_effect option_button" value="effect5">ハート</button>
+                <button class="ob_effect option_button" value="effect6">ため息</button>
+                <button class="ob_effect option_button" value="effect7">笑い</button>
+                <button class="ob_effect option_button" value="effect4">汗1</button>
+                <button class="ob_effect option_button" value="effect8">汗2</button>
+            </div>
+
+            <div id="div_text" class="div_option hidden"><textarea id="text"></textarea></div>
+
+            <div id="div_save"><button id="saveImage">画像保存</button></div>
+        </div>
+        <script src="bindEventEasy.js"></script>
+        <script src="text_style.js"></script>
+        <script src="rendererEasy.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
